@@ -6,11 +6,10 @@
 
 import time
 
-
-results = {}
-
 def memorization(func):
+    results = {}
     def wrapper(*args, **kwargs):
+
         start = time.perf_counter()
 
         checkResult = results.get((*args, *kwargs))
@@ -40,8 +39,6 @@ def loopCount(n):
     return countList
 
 print(say_hello())
-# print(loopCount(10000))
-# print(loopCount(10000))
 loopCount(10000)
 loopCount(10000)
 loopCount(100000)
